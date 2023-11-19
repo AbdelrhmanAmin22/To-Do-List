@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+svg{
+    color: #3a5a40;
+
+}
+body{
+    background: #dad7cd;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header nav {
+    background-color: #3a5a40;
+    height: 10vh;
+    width:100% ;
+    padding: 0 10px;
+    position:fixed;
+    top: 0;
+    left: 0;
+
+}
+header nav h1 {
+    color: #fff;
+    font-size: 32px;
+    padding: 10px 20px ;
+}
+
+.list_container{
+    background-color: #3a5a40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    max-height:500px;
+    overflow-y:scroll;
+}
+.list_container h2{
+    text-align: center;
+    color:#fff;
+    margin-top: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.input_container{
+    padding: 20px;
+    display: flex;
+}
+.input_container *{
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.input_container button{
+    cursor: pointer;
+    margin-left: 2.5px;
+    background-color: #fff;
+
+}
+.input_container button:hover{
+    background-color: #a3b18a;
+}
+.items_container{
+    background-color: #fff;
+    min-height: 150px;
+    position: relative;
+}
+.list_item{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px;
+}
+.list_item:hover{
+    background-color: #a3b18a;
+}
+.list_item svg{
+    margin: 0 8px;
+}
+.list_item  .removeItem svg:hover{
+    color: #d00;
+    cursor: pointer;
+}
+.list_item  .edit svg:hover{
+    color:#2a9d8f;
+    cursor: pointer;
+}
+.submitNewInput svg:hover{
+    color: #e9c46a;
+    cursor: pointer;
+}
+.items_container .selectAll{
+    list-style: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 50px;
+    color: #3a5a40;
+}
+.items_container .selectAll:hover{
+    color: #d00;
+}
+
+.emptyMessage{
+    list-style: none;
+    text-align: center;
+    color: rgb(145, 145, 145);;
+    font-size: 24px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.list_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.list_header .deleteAllSelected{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list_header .deleteAllSelected h6{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+}
+.list_header .deleteAllSelected svg {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.list_header .deleteAllSelected svg:hover {
+    color: #d00;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #3a5a40;
+    height: 6vh;
+    width:100% ;
+}
+footer  p{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+/* responsive media queries */
+@media screen and (max-width:768px) {
+    .list_container h2 {
+        font-size: 20px;
+    }
+    h6 {
+        font-size: 10px;
+    }
+    .list_container{
+        width: 60%;
+        max-height:400px;
+    }
+
+
+    .list_header .deleteAllSelected svg{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:610px){
+    .list_container h2 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 12px;
+    }
+
+    .list_header .deleteAllSelected svg{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    header nav h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .list_container{
+        width: 98%;
+        max-height:400px;
+    }
+    .list_container h2 {
+        font-size: 18px;
+    }
+    .emptyMessage{
+        font-size: 18px;
+    }
+    .input_container{
+        height: 80px;
+    }
+    footer  p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .list_header {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 10px;
+    }
+    h6 {
+        font-size: 10px;
+    }
+
+    .list_header .deleteAllSelected svg{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>To Do List</h1>
+        </nav>
+    </header>
+
+    <div class="list_container">
+        <div class="list_header">
+            <h2> My Tasks </h2>
+            <span class="deleteAllSelected"><h6>Delete selected items</h6><i class="fa-solid fa-trash-can"></i></span> 
+        </div>
+        <div class="input_container">
+                <input type="text" required placeholder="Enter your task" class="taskInput">
+                <button id="addItem">Add</button>
+        </div>
+
+        <ul class="items_container">
+                <li class="selectAll"><input type="checkbox">      Select all </li>
+                <li class="emptyMessage">Nothing To Show Here</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Developed by Abdelrhman Amin,  &copy copy rights all reserved</p>
+    </footer>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
